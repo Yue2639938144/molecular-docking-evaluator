@@ -1,0 +1,79 @@
+分子对接结果优化排序工具批处理报告
+生成时间: 2025-06-19 23:40:43
+
+处理结果摘要:
+数据集 default_params: 成功, 耗时 0.43 秒
+数据集 docking_focused: 成功, 耗时 0.28 秒
+数据集 energy_focused: 成功, 耗时 0.27 秒
+数据集 z_score_normalization: 成功, 耗时 0.34 秒
+
+数据集配置详情:
+
+数据集名称: default_params
+  输入目录: D:\工作文件夹\课题\DB\蛋白
+  选择指标: r_i_docking_score, r_i_glide_gscore, r_i_glide_emodel, r_i_glide_energy
+  指标权重:
+    r_i_docking_score: 1.0
+    r_i_glide_gscore: 1.0
+    r_i_glide_emodel: 1.0
+    r_i_glide_energy: 1.0
+  配置参数:
+    normalization_method: min-max
+    docking_weight: 0.4
+    energy_weight: 0.4
+    optional_weight: 0.2
+
+数据集名称: docking_focused
+  输入目录: D:\工作文件夹\课题\DB\蛋白
+  选择指标: r_i_docking_score, r_i_glide_gscore, r_i_glide_emodel, r_i_glide_energy, r_i_glide_hbond, r_i_glide_lipo
+  指标权重:
+    r_i_docking_score: 2.0
+    r_i_glide_gscore: 1.5
+    r_i_glide_emodel: 1.0
+    r_i_glide_energy: 1.0
+    r_i_glide_hbond: 0.8
+    r_i_glide_lipo: 0.6
+  配置参数:
+    normalization_method: min-max
+    docking_weight: 0.6
+    energy_weight: 0.3
+    optional_weight: 0.1
+
+数据集名称: energy_focused
+  输入目录: D:\工作文件夹\课题\DB\蛋白
+  选择指标: r_i_docking_score, r_i_glide_gscore, r_i_glide_emodel, r_i_glide_energy, r_i_glide_evdw, r_i_glide_ecoul
+  指标权重:
+    r_i_docking_score: 1.0
+    r_i_glide_gscore: 1.0
+    r_i_glide_emodel: 2.0
+    r_i_glide_energy: 1.5
+    r_i_glide_evdw: 1.2
+    r_i_glide_ecoul: 1.0
+  配置参数:
+    normalization_method: min-max
+    docking_weight: 0.3
+    energy_weight: 0.6
+    optional_weight: 0.1
+
+数据集名称: z_score_normalization
+  输入目录: D:\工作文件夹\课题\DB\蛋白
+  选择指标: r_i_docking_score, r_i_glide_gscore, r_i_glide_emodel, r_i_glide_energy, r_i_glide_lipo, r_i_glide_hbond, r_i_glide_metal, r_i_glide_rewards, r_i_glide_evdw, r_i_glide_ecoul, r_i_glide_erotb, r_i_glide_esite, r_i_glide_einternal
+  指标权重:
+    r_i_docking_score: 1.0
+    r_i_glide_gscore: 1.0
+    r_i_glide_emodel: 1.0
+    r_i_glide_energy: 1.0
+    r_i_glide_lipo: 1.0
+    r_i_glide_hbond: 1.0
+    r_i_glide_metal: 1.0
+    r_i_glide_rewards: 1.0
+    r_i_glide_evdw: 1.0
+    r_i_glide_ecoul: 1.0
+    r_i_glide_erotb: 1.0
+    r_i_glide_esite: 1.0
+    r_i_glide_einternal: 1.0
+  配置参数:
+    normalization_method: z-score
+    docking_weight: 0.4
+    energy_weight: 0.4
+    optional_weight: 0.2
